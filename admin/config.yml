@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Hesi777/nanodent
   branch: main
 
 media_folder: "images/uploads"
@@ -8,9 +9,9 @@ public_folder: "/images/uploads"
 collections:
   - name: "cennik"
     label: "Cennik"
-    files:
-      - label: "Cennik główny"
-        name: "cennik"
-        file: "data/cennik.md"
-        fields:
-          - { label: "Treść", name: "body", widget: "markdown" }
+    folder: "data"
+    create: false
+    slug: "cennik"
+    format: "frontmatter"
+    fields:
+      - { label: "Treść", name: "body", widget: "markdown" }
